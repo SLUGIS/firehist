@@ -83,39 +83,39 @@ body {
 </body>
 <script>
 
-var map = L.mapbox.map('map', 'geoslo.map-cma6j2y3')
+var map = L.mapbox.map('map', 'slugis.25db57b7')
     .setView([37.2, -121], 6);
 
 var layers = [{
-    name: '1960-2012',
+    name: '1960-2013',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('geoslo.firehist2012'),
-        L.mapbox.gridLayer('geoslo.firehist2012')])
-}, {
-    name: '60\'s',
+        L.mapbox.tileLayer('slugis.ac5b69df'),
+        L.mapbox.gridLayer('slugis.ac5b69df')])
+},  {
+    name: 'Pre-70\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('geoslo.firehist2012_60s'),
-        L.mapbox.gridLayer('geoslo.firehist2012_60s')])
-}, {
+        L.mapbox.tileLayer('slugis.70d73693'),
+        L.mapbox.gridLayer('slugis.70d73693')])
+},  {
     name: '70\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('geoslo.firehist2012_70s'),
-        L.mapbox.gridLayer('geoslo.firehist2012_70s')])
+        L.mapbox.tileLayer('slugis.022be4ee'),
+        L.mapbox.gridLayer('slugis.022be4ee')])
 }, {
     name: '80\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('geoslo.firehist2012_80s'),
-        L.mapbox.gridLayer('geoslo.firehist2012_70s')])
+        L.mapbox.tileLayer('slugis.f1f7d8fe'),
+        L.mapbox.gridLayer('slugis.f1f7d8fe')])
 }, {
     name: '90\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('geoslo.firehist2012_90s'),
-        L.mapbox.gridLayer('geoslo.firehist2012_90s')])
+        L.mapbox.tileLayer('slugis.4cebb459'),
+        L.mapbox.gridLayer('slugis.4cebb459')])
 }, {
     name: '2000\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('geoslo.firehist2012_2000s'),
-        L.mapbox.gridLayer('geoslo.firehist2012_2000s')])
+        L.mapbox.tileLayer('slugis.99cce936'),
+        L.mapbox.gridLayer('slugis.99cce936')])
 }];
 
 var gridControl;
