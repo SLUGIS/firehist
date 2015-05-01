@@ -9,18 +9,22 @@
   <!--[if lte IE 8]>
     <link href='http://api.tiles.mapbox.com/mapbox.js/v1.1.0/mapbox.ie.css' rel='stylesheet' >
   <![endif]-->
-  <style>
+<style>
+
+html { overflow-y: hidden; }
 
 body {
-    margin:0;
-    padding:0;
+  margin:0;
+  padding:0;
 }
+
 #map {
-    position:absolute;
-    top:0;
-    bottom:0;
-    width:100%;
+  position:fixed;
+  top:0;
+  bottom:0;
+  width:100%;
 }
+
 #ui-container {
   height:900px;
   float:left;
@@ -54,7 +58,7 @@ body {
   text-decoration: none;
 }
 
-#map-ui li:hover a{
+#map-ui li:hover a {
   background-color: #666;
   color:#000;
 }
@@ -69,54 +73,67 @@ body {
   -webkit-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
+
 #map-ui a.active {
   color: #FFF;
   background: rgba(0, 0, 0, 1);
-}</style>
+}
+
+</style>
 </head>
+  
 <body>
-<div id='ui-container'>
-	<ul id='map-ui'></ul>
-</div>
-<div id='map'></div>
-<script src='site.js' type='text/javascript'></script>
+  <div id='ui-container'>
+	 <ul id='map-ui'></ul>
+  </div>
+  <div id='map'></div>
+  <script src='site.js' type='text/javascript'></script>
 </body>
+
 <script>
 
-var map = L.mapbox.map('map', 'slugis.25db57b7')
-    .setView([37.2, -121], 6);
+var map = L.mapbox.map('map', 'slugis.25db57b7', {
+    scrollWheelZoom: false
+}).setView([37.2, -121], 6);
 
-var layers = [{
+var layers = [
+  { 
     name: '1960-2013',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('slugis.ac5b69df'),
-        L.mapbox.gridLayer('slugis.ac5b69df')])
-},  {
+      L.mapbox.tileLayer('slugis.ac5b69df'), 
+      L.mapbox.gridLayer('slugis.ac5b69df')
+    ])
+  },  
+  {
     name: 'Pre-70\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('slugis.70d73693'),
-        L.mapbox.gridLayer('slugis.70d73693')])
-},  {
+      L.mapbox.tileLayer('slugis.70d73693'),
+      L.mapbox.gridLayer('slugis.70d73693')])
+  },  
+  {
     name: '70\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('slugis.022be4ee'),
-        L.mapbox.gridLayer('slugis.022be4ee')])
-}, {
+      L.mapbox.tileLayer('slugis.022be4ee'),
+      L.mapbox.gridLayer('slugis.022be4ee')])
+  }, 
+  {
     name: '80\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('slugis.f1f7d8fe'),
-        L.mapbox.gridLayer('slugis.f1f7d8fe')])
-}, {
+      L.mapbox.tileLayer('slugis.f1f7d8fe'),
+      L.mapbox.gridLayer('slugis.f1f7d8fe')])
+  }, 
+  {
     name: '90\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('slugis.4cebb459'),
-        L.mapbox.gridLayer('slugis.4cebb459')])
-}, {
+      L.mapbox.tileLayer('slugis.4cebb459'),
+      L.mapbox.gridLayer('slugis.4cebb459')])
+  }, 
+  {
     name: '2000\'s',
     layer: L.layerGroup([
-        L.mapbox.tileLayer('slugis.99cce936'),
-        L.mapbox.gridLayer('slugis.99cce936')])
-}];
+      L.mapbox.tileLayer('slugis.99cce936'),
+      L.mapbox.gridLayer('slugis.99cce936')])
+  }];
 
 var gridControl;
 
