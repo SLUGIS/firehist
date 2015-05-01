@@ -93,9 +93,14 @@ body {
 <script>
 
 var map = L.mapbox.map('map', 'slugis.25db57b7', {
-    scrollWheelZoom: false
-}).setView([37.2, -121], 6);
-
+     // Disable default double-click behavior.
+    doubleClickZoom: false
+})
+.setView([37.2, -121], 6)
+.on('dblclick', function(e) {
+    // improve double click zoom behavior
+    map.setView(e.latlng, map.getZoom() + 1);
+});
 var layers = [
   { 
     name: '1960-2013',
