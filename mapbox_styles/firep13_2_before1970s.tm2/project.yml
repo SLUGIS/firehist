@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: ''
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -121.6338
+  - 36.0846
+  - 9
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 13
+minzoom: 6
+name: ''
+source: "tmsource:///usr/local/share/mapbox-projects/firep13_2.tm2source"
+styles: 
+  - style.mss
+template: ''

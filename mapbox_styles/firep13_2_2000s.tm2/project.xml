@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-117.9712,35.7108,5</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="source"><![CDATA[tmsource:///usr/local/share/mapbox-projects/firep13_2.tm2source]]></Parameter>
+</Parameters>
+
+
+<Style name="firep13_2" filter-mode="first">
+  <Rule>
+    <Filter>([alarm_date] &gt;= 20000101)</Filter>
+    <LineSymbolizer stroke-width="0.3" stroke="#e14b3b" />
+    <PolygonSymbolizer fill="#e14b3b" fill-opacity="0.6" />
+  </Rule>
+</Style>
+<Layer name="firep13_2"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>firep13_2</StyleName>  </Layer>
+
+</Map>

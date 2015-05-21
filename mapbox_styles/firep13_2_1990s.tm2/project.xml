@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="rgba(255, 0, 0, 0)">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-124.574,36.6508,6</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">13</Parameter>
+  <Parameter name="minzoom">6</Parameter>
+  <Parameter name="source"><![CDATA[tmsource:///usr/local/share/mapbox-projects/firep13_2.tm2source]]></Parameter>
+</Parameters>
+
+
+<Style name="firep13_2" filter-mode="first">
+  <Rule>
+    <Filter>([alarm_date] &gt;= 19900101) and ([alarm_date] &lt; 20000101)</Filter>
+    <LineSymbolizer stroke-width="0.3" stroke="#1c8b98" />
+    <PolygonSymbolizer fill="#1c8b98" fill-opacity="0.6" />
+  </Rule>
+</Style>
+<Layer name="firep13_2"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>firep13_2</StyleName>  </Layer>
+
+</Map>

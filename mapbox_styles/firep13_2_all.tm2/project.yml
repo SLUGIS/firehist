@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: ''
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -120.0037
+  - 37.1253
+  - 6
+description: ''
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 13
+minzoom: 6
+name: ''
+source: "mapbox:///slugis.716c9a95"
+styles: 
+  - style.mss
+template: ''
