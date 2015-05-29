@@ -4,7 +4,7 @@
 
 <Parameters>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-120.8716,37.7267,10</Parameter>
+  <Parameter name="center">-121.4429,36.1113,6</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">13</Parameter>
   <Parameter name="minzoom">6</Parameter>
@@ -14,9 +14,9 @@
 
 <Style name="firep13_2" filter-mode="first">
   <Rule>
-    <Filter>([alarm_date] &gt;= 19700101) and ([alarm_date] &lt; 19800101)</Filter>
-    <LineSymbolizer stroke-width="0.5" stroke="#808080" />
-    <PolygonSymbolizer fill="#ffffff" fill-opacity="0.6" />
+    <Filter>([alarm_date] &gt;= 19800101) and ([alarm_date] &lt; 19900101)</Filter>
+    <LineSymbolizer stroke-width="0.3" stroke="#edaa4e" />
+    <PolygonSymbolizer fill="#fcc059" fill-opacity="0.6" />
   </Rule>
 </Style>
 <Layer name="firep13_2"

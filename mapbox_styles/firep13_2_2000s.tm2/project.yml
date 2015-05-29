@@ -1,4 +1,4 @@
-_prefs: 
+refs: 
   saveCenter: true
 _properties: 
   bridge: 
@@ -12,15 +12,25 @@ bounds:
 center: 
   - -117.9712
   - 35.7108
-  - 5
+  - 6
 description: ''
 format: "png8:m=h"
-interactivity_layer: ''
-layers: null
-maxzoom: 22
-minzoom: 0
+interactivity_layer: firep13_2
+Layer: ''
+maxzoom: 13
+minzoom: 6
 name: ''
 source: "tmsource:///usr/local/share/mapbox-projects/firep13_2.tm2source"
-styles: 
+styles:
   - style.mss
-template: ''
+template: |-
+  <strong>fire name: {{fire_name}}</strong>
+  <small>agency: {{agency}}</small>
+  <small>alarm date: {{alarm_date}}</small>
+  {{#cont_date}}
+  <small>cont date: {{cont_date}}</small>
+  {{/cont_date}}  
+  <small>gis acres: {{gis_acres}}</small>
+  <small>year: {{year}}</small>
+  <small>cause: {{cause}}</small>
+
