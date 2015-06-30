@@ -67,7 +67,7 @@ function hoverPop(e) {
    if (!e.data)  
       return;
    //runs if data is found
-   console.log(e.data.alarm_date);
+   //console.log(e.data.alarm_date);
    var popup = L.popup({closeButton:false})
       .setLatLng(e.latLng)
       .setContent(
@@ -102,6 +102,11 @@ var overlays = {
       L.mapbox.gridLayer('slugis.99cce936').on('mouseover', hoverPop)
     ])
 };
+
+//default: all layers ON
+for (var label in overlays) {
+  overlays[label].addTo(map);
+}
 
 //leaflet tilelayer instantiation control {baselayers, overlays}
 L.control.layers({
