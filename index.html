@@ -71,11 +71,11 @@ function hoverPop(e) {
    var popup = L.popup({closeButton:false})
       .setLatLng(e.latLng)
       .setContent(
-       '<p><b>Fire Name:</b> ' +getName(e.data.fire_name) +
-       '<br/><b>Agency:</b> ' + e.data.agency+ 
-       '<br/><b>Alarm Date:</b> ' + getDate(e.data.alarm_date)+ 
-       '<br/><b>Cause:</b> ' + e.data.cause+
-       '</p>')
+       '<p><b>Fire Name: </b> ' +getName(e.data.fire_name) +
+       '<br/><b>Agency: </b> ' + e.data.agency+ 
+       '<br/><b>Alarm Date: </b> ' + getDate(e.data.alarm_date)+ 
+       '<br/><b>Cause: </b> ' + e.data.cause+
+       '<br/><b>Area Burned: </b>' + e.data.gis_acres.toFixed(3) + ' acres</p>')
       .openOn(map);
 }
 
