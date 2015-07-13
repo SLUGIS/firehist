@@ -68,7 +68,7 @@ function hoverPop(e) {
       return;
    //runs if data is found
    //console.log(e.data.alarm_date);
-   var popup = L.popup({closeButton:false})
+   var popup = L.popup()
       .setLatLng(e.latLng)
       .setContent(
        '<p><b>Fire Name: </b> ' +getName(e.data.fire_name) +
@@ -83,23 +83,23 @@ function hoverPop(e) {
 var overlays = {
     'Before 1970': L.layerGroup([
       L.mapbox.tileLayer('slugis.70d73693'),
-      L.mapbox.gridLayer('slugis.70d73693').on('mouseover', hoverPop)
+      L.mapbox.gridLayer('slugis.70d73693').on('click', hoverPop)
     ]),  
     '1970-1979': L.layerGroup([
       L.mapbox.tileLayer('slugis.022be4ee'),
-      L.mapbox.gridLayer('slugis.022be4ee').on('mouseover', hoverPop)
+      L.mapbox.gridLayer('slugis.022be4ee').on('click', hoverPop)
     ]), 
     '1980-1989': L.layerGroup([
       L.mapbox.tileLayer('slugis.f1f7d8fe'),
-      L.mapbox.gridLayer('slugis.f1f7d8fe').on('mouseover', hoverPop)
+      L.mapbox.gridLayer('slugis.f1f7d8fe').on('click', hoverPop)
     ]), 
     '1990-1999': L.layerGroup([
       L.mapbox.tileLayer('slugis.4cebb459'),
-      L.mapbox.gridLayer('slugis.4cebb459').on('mouseover', hoverPop)
+      L.mapbox.gridLayer('slugis.4cebb459').on('click', hoverPop)
     ]), 
     'After 2000': L.layerGroup([
       L.mapbox.tileLayer('slugis.99cce936'),
-      L.mapbox.gridLayer('slugis.99cce936').on('mouseover', hoverPop)
+      L.mapbox.gridLayer('slugis.99cce936').on('click', hoverPop)
     ])
 };
 
