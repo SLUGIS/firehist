@@ -11,7 +11,15 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
+  
   #map { position:absolute; top:0; bottom:0; width:100%; }
+  
+  .footer{ 
+    position: fixed;     
+    text-align: center;    
+    bottom: 0px; 
+    width: 100%;
+  }  
 </style>
 </head>
 
@@ -114,5 +122,7 @@ L.control.layers({
    'Plain White': L.mapbox.tileLayer('mapbox.light')
 }, overlays).addTo(map);
 </script>
+
+<div class="footer">Data courtesy of FRAP : <a href= "http://frap.fire.ca.gov/data/frapgisdata-sw-fireperimeters_download.php">source</a></div>
 </body>
 </html>
